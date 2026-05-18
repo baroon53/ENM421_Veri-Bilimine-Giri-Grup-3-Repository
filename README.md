@@ -43,5 +43,5 @@ Model Analizi ve Kısıtlar
 
 	Model, düşük ve orta bütçeli filmlerde başarılı tahminler üretirken; franchise bilinirliği yüksek blockbuster yapımlarda sistematik olarak gerçek değerin altında tahmin yapmıştır. 
 	GridSearchCV hiperparametre optimizasyonu sonrası yapılan Cross Validation (Çapraz Doğrulama) sonuçlarında yüksek varyans (0.179 standart sapma) gözlemlenmiştir. Bu durum, 116 filmlik sınırlı veri setinden kaynaklı bir "overfitting" (ezberleme) eğilimine işaret etmektedir. 
-	Franchise bilinirliği, yönetmen ve oyuncu ünü gibi dış faktörlerin modele dahil edilmemesi mevcut modelin kısıtları arasındadır. 
+	Franchise bilinirliği, yönetmen ve oyuncu ünü gibi dış faktörlerin modele dahil edilmemesi mevcut modelin eksiklikleri arasındadır ve iyileştirilebilir önemli bir nokta olarak belirlenmiştir. 
 
