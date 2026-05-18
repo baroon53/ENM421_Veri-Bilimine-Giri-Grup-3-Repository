@@ -25,16 +25,22 @@ Kullanılan Yöntemler ve Teknolojiler
 	Tahminleme için Random Forest Regressor ve XGBoost Regressor algoritmaları kullanılmış; modeller GridSearchCV ile optimize edilmiştir. 
 	
 **Özet Sonuçlar ve Çıktılar**
+
   **Model Performansı**
+  
 	En İyi Model: "Bütçe + Kategori + Duygu" parametrelerini içeren "Tam Özellik Seti" ile kurulan Random Forest modeli, R^2 = 0.596 skoru ile en iyi performansı göstermiştir. 
 	Bütçe ve kategori tek başına gişenin sadece %2.7'sini açıklarken, duygu analizi gişenin %42.2'sini tek başına açıklayabilmiştir. Tüm veri setinin entegre edilmesiyle açıklayıcılık %59.6'ya ulaşmıştır. 
-Gişeyi Etkileyen Faktörler (Feature Importance)
-Random Forest algoritmasının özellik önem (feature importance) sonuçlarına göre:
+	
+**Gişeyi Etkileyen Faktörler (Feature Importance)**
+
+	Random Forest algoritmasının özellik önem (feature importance) sonuçlarına göre
+
 	Ortalama Beğeni (%33): Bir yorumun ortalama kaç beğeni aldığı gişeyi açıklayan en güçlü değişkendir. 
 	Bütçe (%24): İkinci sıradaki en önemli değişkendir. 
 	Toplam Beğeni (%16): Üçüncü sıradaki etken olmuştur. 
 	Kategori Etkisi: Analiz sonucunda film türünün (kategorisinin) gişeyi açıklamada etkisinin neredeyse sıfır olduğu gözlemlenmiştir. 
 Model Analizi ve Kısıtlar
+
 	Model, düşük ve orta bütçeli filmlerde başarılı tahminler üretirken; franchise bilinirliği yüksek blockbuster yapımlarda sistematik olarak gerçek değerin altında tahmin yapmıştır. 
 	GridSearchCV hiperparametre optimizasyonu sonrası yapılan Cross Validation (Çapraz Doğrulama) sonuçlarında yüksek varyans (0.179 standart sapma) gözlemlenmiştir. Bu durum, 116 filmlik sınırlı veri setinden kaynaklı bir "overfitting" (ezberleme) eğilimine işaret etmektedir. 
 	Franchise bilinirliği, yönetmen ve oyuncu ünü gibi dış faktörlerin modele dahil edilmemesi mevcut modelin kısıtları arasındadır. 
